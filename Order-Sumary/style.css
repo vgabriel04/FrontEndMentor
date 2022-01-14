@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    min-height: 100vh;
+    background-image: url(images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain ; 
+    background-color: var(--pale-blue);
+    position: relative;
+}
+
+.container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 450px;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    font-size: 16px;
+
+}
+
+.text-content {
+    padding: 7%;
+    text-align: center;
+}
+
+.title {
+    color: var(--dark-blue);
+    font-weight: 900;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.subtitle{
+    color: var(--desaturated-blue);
+    font-size: 16px;
+    font-weight: 900;
+    margin-bottom: 25px;
+}
+
+.plan-box{
+    background-color: var(--very-pale-blue);
+    border-radius: 10px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.plan-box div{
+    margin-left: 10px;
+}
+
+.plan-box div h5{
+    margin-bottom: 5px;
+    margin-left: 8px;
+    font-weight: 900;
+    font-size: 15px;
+    color: var(--dark-blue);
+}
+
+.plan-box div p{
+    margin-left: 8px;
+    font-size: 15px;
+    color: var(--desaturated-blue);
+}
+
+.plan-box a{
+    font-weight: 900;
+    margin-right: 12px;
+    color: var(--bright-blue);
+}
+
+.proceed-btn {
+    display: block;
+    background-color: var(--bright-blue);
+    border-radius: 10px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+    box-shadow: 0px 12px 20px var(--desaturated-blue)
+}
+
+.cancel-btn{
+    text-decoration: none;
+    font-weight: 900;
+    color: var(--desaturated-blue);
+}
+
+.plan-box a:hover{
+    text-decoration: none;
+    color: rgb(128, 77, 224);
+    transition: 0.25s;
+
+}
+
+.proceed-btn:hover{
+    background-color: rgb(128, 77, 224);
+    transition: 0.25s;
+}
+
+.cancel-btn:hover{
+    color: var(--dark-blue);
+    transition: 0.25s;
+
+}
+
+@media only screen and (max-width: 425px){
+    body{
+        background-image: url(images/pattern-background-mobile.svg);
+        font-size: 14px;
+    }
+    .container{
+        width: 85%
+    }
+
+    .title{
+        font-size: 23px;
+    }
+
+}
