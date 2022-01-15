@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  --transparent-white: hsla(0, 0%, 100%, 0.75); /*(paragraphs)*/
+  --very-light-gray: hsl(0, 0%, 95%); /*(background, headings, buttons)*/
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+.btn {
+  font-family: "Lexend Deca", sans-serif;
+  background-image: linear-gradient(45deg, grey, cyan);
+}
+
+h3 {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--transparent-white);
+}
+
+.btn {
+  background-color: #fff;
+  padding: 15px 25px;
+  border-radius: 30px;
+  border: none;
+  margin-top: 20px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.card {
+  padding: 40px;
+}
+
+.container {
+  padding: 20px;
+  margin: 0 auto;
+}
+
+img {
+  margin-bottom: 30px;
+}
+
+.card-sedan {
+  background-color: var(--bright-orange);
+  color: white;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-suvs {
+  background-color: var(--dark-cyan);
+  color: white;
+}
+
+.card-luxury {
+  background-color: var(--very-dark-cyan);
+  color: white;
+  border-radius: 0 0 10px 10px;
+}
+
+.card-sedan .btn {
+  color: var(--bright-orange);
+}
+
+.card-suvs .btn {
+  color: var(--dark-cyan);
+}
+
+.card-luxury .btn {
+  color: var(--very-dark-cyan);
+}
+
+.btn:hover {
+  background-color: transparent;
+  border: 2px solid var(--transparent-white);
+  color: white;
+}
+
+@media (min-width: 992px) {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 900px;
+  }
+
+  .card-sedan {
+    border-radius: 10px 0 0 10px;
+  }
+
+  .card-luxury {
+      border-radius: 0 10px 10px 0;
+  }
+
+  .card{
+      padding: 45px;
+  }
+
+  .card p{
+      margin-bottom: 70px;
+  }
+}
